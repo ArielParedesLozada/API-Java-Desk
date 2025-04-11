@@ -42,7 +42,7 @@ public class APIEstudiantes extends APIRest<Estudiante> {
     @Override
     public void GET(String params) throws Exception {
         this.request = HttpRequest.newBuilder()
-                .uri(new URI(this.URL + "?" + params))
+                .uri(new URI(this.URL))
                 .header("Content-Type", "application/json")
                 .GET()
                 .build();

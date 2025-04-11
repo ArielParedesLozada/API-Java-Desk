@@ -1,6 +1,9 @@
 package Views;
 
+import java.util.ArrayList;
+
 import Controllers.APIEstudiantes;
+import Controllers.ResponseEstudiantes;
 import Models.Estudiante;
 
 public class Test {
@@ -19,6 +22,11 @@ public class Test {
         } catch (Exception e) {
             System.out.println("Error en el get "+e.getMessage());
         }
-        System.out.println(api.fetchData());
+        String response = api.fetchData();
+        ArrayList<Estudiante> estudiantes = (new ResponseEstudiantes()).parseEstudiantes(response);
+        for (Estudiante estudiante : estudiantes) {
+            System.out.println(estudiante);
+        }
+
     }
 }
