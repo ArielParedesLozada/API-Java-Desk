@@ -20,7 +20,3 @@ mvn clean
 mvn compile
 ```
 en la raíz del proyecto 
-4. Configurar el archivo .env (poner la IP de la API)
-```
-SERVER_ADDRESS = # La ip del servidor
-```
