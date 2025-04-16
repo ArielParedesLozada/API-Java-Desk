@@ -43,7 +43,7 @@ public class TablaEstudiantes extends javax.swing.JFrame {
      * Creates new form TablaEstudiantes
      */
     public TablaEstudiantes() {
-        this.facade = new FacadeEstudiante("http://192.168.1.11/servidor/MVC/Controllers/APIRest.php");
+        this.facade = new FacadeEstudiante("http://localhost/servidor/MVC/Controllers/Routes/APIEstudiantes.php");
         initComponents();
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(2);
