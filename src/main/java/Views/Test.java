@@ -1,12 +1,13 @@
 package Views;
 
 import Controllers.Facades.FacadeEstudiante;
+import Controllers.Facades.FacadeEstudianteAPI1;
 import Models.Estudiante;
 
 public class Test {
     public static void main(String[] args) {
-        String path = "http://localhost/servidor/MVC/Controllers/Routes/APIEstudiantes.php";
-        FacadeEstudiante facade = new FacadeEstudiante(path);
+        String path = "http://localhost/servidor/MVC/Controllers/APIRest.php";
+        FacadeEstudianteAPI1 facade = new FacadeEstudianteAPI1(path);
         Estudiante nuevo = new Estudiante();
         nuevo.apellido = "Atreides";
         nuevo.cedula = "18556565";
