@@ -4,7 +4,7 @@
  */
 package Views;
 
-import Controllers.Facades.FacadeEstudianteAPI1;
+import Controllers.Facades.FacadeEstudiante;
 import Models.Estudiante;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class TablaEstudiantes extends javax.swing.JFrame {
 
-    protected FacadeEstudianteAPI1 facade;
+    protected FacadeEstudiante facade;
     private ArrayList<Estudiante> estudiantes;
 
     protected void actualizarTabla() {
@@ -43,7 +43,7 @@ public class TablaEstudiantes extends javax.swing.JFrame {
      * Creates new form TablaEstudiantes
      */
     public TablaEstudiantes() {
-        this.facade = new FacadeEstudianteAPI1("http://localhost/servidor/MVC/Controllers/APIRest.php");
+        this.facade = new FacadeEstudiante("http://localhost/servidor/MVC-Pattern/Controllers/Routes/APIEstudiantes.php");
         initComponents();
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(2);
